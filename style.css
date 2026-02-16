@@ -1,0 +1,98 @@
+/* กำหนดฟอนต์และพื้นหลัง */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* สีพื้นหลังเทาอ่อน สบายตา */
+    color: #333;
+}
+
+/* ส่วนหัวและเมนู */
+header {
+    background-color: #4A90E2; /* สีฟ้าสะอาดตา */
+    color: white; /* เติม ; ตรงนี้ */
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white; /* เติม ; ตรงนี้ */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffeb3b; /* แถม: เปลี่ยนสีตอนเอาเมาส์ชี้ให้ดูเด่นขึ้น */
+}
+
+/* ส่วนเนื้อหา */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white; /* เติม ; ตรงนี้ */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+    width: 180px; 
+    height: auto; 
+    float: left; 
+    margin-right: 20px; 
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 3px solid #4A90E2;
+}
+
+/* เพิ่มเติม: ป้องกันไม่ให้เนื้อหาส่วนล่างไหลขึ้นมาปน */
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* จัดการกล่องรวมรูปภาพ */
+.hobby-gallery {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    margin-bottom: 20px;
+}
+
+/* จัดการแต่ละรูปและคำบรรยาย */
+.hobby-item {
+    width: 200px; 
+    text-align: center; 
+}
+
+.hobby-item img {
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    border: 2px solid #ddd;
+    transition: transform 0.3s; /* แถม: ใส่ Effect เวลาเอาเมาส์ชี้ */
+}
+
+.hobby-item img:hover {
+    transform: scale(1.05); /* รูปจะขยายใหญ่ขึ้นนิดนึงเวลาชี้ */
+}
+
+/* ส่วนท้าย */
+footer {
+    text-align: center;
+    padding: 20px; /* เพิ่ม Padding ให้กว้างขึ้นหน่อย */
+    font-size: 0.9em;
+    color: white; /* เปลี่ยนเป็นสีขาวให้อ่านง่ายขึ้น */
+    background-color: #333; /* เปลี่ยนสีพื้นหลังให้เข้ากับโทนเว็บ */
+    margin-top: 30px;
+}
